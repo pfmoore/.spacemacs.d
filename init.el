@@ -276,12 +276,12 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ))
 
-(defun pfm-font ()
-  (unless (spacemacs/set-default-font dotspacemacs-default-font)
-    (spacemacs-buffer/warning
-     "Cannot find any of the specified fonts (%s)! Font settings may not be correct."
-     (mapconcat 'car dotspacemacs-default-font ", ")))
-  (remove-hook 'focus-in-hook #'pfm-font))
+;(defun pfm-font ()
+;  (unless (spacemacs/set-default-font dotspacemacs-default-font)
+;    (spacemacs-buffer/warning
+;     "Cannot find any of the specified fonts (%s)! Font settings may not be correct."
+;     (mapconcat 'car dotspacemacs-default-font ", ")))
+;  (remove-hook 'focus-in-hook #'pfm-font))
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
@@ -291,7 +291,7 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
-  (add-hook 'focus-in-hook #'pfm-font)
+  ;(add-hook 'focus-in-hook #'pfm-font)
 
   (setq
    dotspacemacs-default-font '(("Source Code Pro-12" :powerline-scale 1.1)
